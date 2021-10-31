@@ -30,6 +30,8 @@ defmodule Livebook.Notebook.Cell.Elixir do
           | {:text, binary()}
           # Markdown content
           | {:markdown, binary()}
+          # HTML content
+          | {:html, binary()}
           # A raw image in the given format
           | {:image, content :: binary(), mime_type :: binary()}
           # Vega-Lite graphic
