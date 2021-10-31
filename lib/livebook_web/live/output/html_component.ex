@@ -4,7 +4,7 @@ defmodule LivebookWeb.Output.HTMLComponent do
   @impl true
   def render(assigns) do
     ~H"""
-    <%= @content %>
+    <%= raw(@content) %>
     """
   end
 end
