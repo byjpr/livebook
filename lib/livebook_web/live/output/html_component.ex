@@ -4,7 +4,11 @@ defmodule LivebookWeb.Output.HTMLComponent do
   @impl true
   def render(assigns) do
     ~H"""
-    <%= raw(@content) %>
+    <div class="html-renderer"
+      id={"html-renderer-#{@id}"}
+      data-id={@id}>
+      <%= raw(@content) %>
+    </div>
     """
   end
 end

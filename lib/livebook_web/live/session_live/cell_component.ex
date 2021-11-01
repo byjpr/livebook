@@ -466,6 +466,13 @@ defmodule LivebookWeb.SessionLive.CellComponent do
     )
   end
 
+  defp render_output({:html, content}, %{id: id}) do
+    live_component(LivebookWeb.Output.HTMLComponent,
+      id: id,
+      content: content
+    )
+  end
+
   defp render_output({:vega_lite_static, spec}, %{id: id}) do
     live_component(LivebookWeb.Output.VegaLiteStaticComponent, id: id, spec: spec)
   end
